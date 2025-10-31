@@ -18,7 +18,11 @@ st.set_page_config(
 def load_model():
     try:
         model = joblib.load("sales_prediction_model.pkl")
+        st.sidebar.success("✅ Model loaded successfully!")  # Optional: Confirms in sidebar
         return model
+    except FileNotFoundError:
+        st.error("❌ Model file 'sales_prediction_model.pkl' not found. Upload it to your repo!")
+        st.stop()
     except Exception as e:
         st.error(f"Error loading model: {e}")
         st.stop()
@@ -30,9 +34,10 @@ st.markdown(
     """
     <style>
     .banner-img img {
-        height: 250px;   
-        width: 1600px;  
-        object-fit: cover; 
+        height: 250px;
+        width: 100%;
+        max-width: 1600px;
+        object-fit: cover;
         border-radius: 10px;
     }
     </style>
@@ -40,14 +45,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Header image
+# Header image (fixed markdown; URL may need checking—see note below)
 st.markdown(
     '<div class="banner-img">'
-    '<img src="https://www.transaction.technology/uploads/images/_ecb2_images/gallery_feature_76/POS%20Retail.jpg" />'
-    '</div>',
-    unsafe_allow_html=True
-)
- />'
+    '<img src="https://www.transaction.technology/uploads/images/_ecb2_images/gallery_feature_76/POS%20Retail.jpg" alt="Retail POS Banner">'
     '</div>',
     unsafe_allow_html=True
 )
