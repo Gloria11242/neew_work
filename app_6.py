@@ -21,7 +21,7 @@ def load_model():
         st.sidebar.success("✅ Model loaded successfully!")  # Optional: Confirms in sidebar
         return model
     except FileNotFoundError:
-        st.error("❌ Model file 'sales_prediction_model.pkl' not found. Upload it to your repo!")
+        st.error(" Model file 'sales_prediction_model.pkl' not found. Upload it to your repo!")
         st.stop()
     except Exception as e:
         st.error(f"Error loading model: {e}")
@@ -56,16 +56,16 @@ st.markdown(
 # ==============================
 # Sidebar: Info & Instructions
 # ==============================
-st.sidebar.title("ℹ️ About This App")
+st.sidebar.title(" About This App")
 st.sidebar.markdown(
     """
-    ### 🧮 Sales Prediction App
+    ###  Sales Prediction App
     This app predicts **total sales** based on two key inputs:
     - **Quantity Ordered**
     - **Price Each**
 
     ---
-    ### ⚙️ How the Model Works
+    ###  How the Model Works
     The model was trained on historical sales data to learn patterns between:
     - Number of items sold  
     - Price per item  
@@ -75,7 +75,7 @@ st.sidebar.markdown(
     `Predicted Sales ≈ Quantity × Price × (Model Adjustment)`
 
     ---
-    ### 🚀 How to Use
+    ###  How to Use
     1. Enter the **quantity ordered** and **price per item**.  
     2. Click **Predict Sales**.  
     3. View your predicted total sales instantly.  
@@ -86,10 +86,10 @@ st.sidebar.markdown(
 # ==============================
 # Main App Content
 # ==============================
-st.title("💰 Sales Prediction App")
+st.title(" Sales Prediction App")
 st.subheader("Predict your sales using quantity and price")
 
-st.markdown("### 🧾 Enter Your Data")
+st.markdown("###  Enter Your Data")
 
 # Input fields (defaults set to 77 and 89)
 quantity = st.number_input("Enter Quantity Ordered:", min_value=0, value=77)
@@ -98,10 +98,10 @@ price = st.number_input("Enter Price Each ($):", min_value=0.0, value=89.0, step
 # ==============================
 # Prediction
 # ==============================
-if st.button("🔮 Predict Sales"):
+if st.button(" Predict Sales"):
     X_new = np.array([[quantity, price]])
     try:
         predicted_sales = model.predict(X_new)[0]
-        st.success(f"✅ **Predicted Sales:** ${predicted_sales:,.2f}")
+        st.success(f" **Predicted Sales:** ${predicted_sales:,.2f}")
     except Exception as e:
         st.error(f"Prediction failed: {e}")
