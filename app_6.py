@@ -48,7 +48,7 @@ st.markdown(
 # Header image (fixed markdown; URL may need checking—see note below)
 st.markdown(
     '<div class="banner-img">'
-    '<img src="https://tse3.mm.bing.net/th/id/OIP.Bliz0nZpoj_hbUq5oZmzsgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">'
+    '<img src="https://www.wavetec.com/wp-content/uploads/2024/01/streamlining-retail-transactions-through-POS-payments.jpg">'
     '</div>',
     unsafe_allow_html=True
 )
