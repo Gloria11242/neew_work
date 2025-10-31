@@ -25,6 +25,51 @@ def load_model():
 
 model = load_model()
 
+# Custom CSS to adjust image height
+st.markdown(
+    """
+    <style>
+    .banner-img img {
+        height: 250px;   
+        width: 1600px;  
+        object-fit: cover; 
+        border-radius: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Header image
+st.markdown(
+    '<div class="banner-img">'
+    '<img src=# Custom CSS to adjust image height
+st.markdown(
+    """
+    <style>
+    .banner-img img {
+        height: 250px;   
+        width: 1600px;  
+        object-fit: cover; 
+        border-radius: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Header image
+st.markdown(
+    '<div class="banner-img">'
+    '<img src="https://www.transaction.technology/uploads/images/_ecb2_images/gallery_feature_76/POS%20Retail.jpg" />'
+    '</div>',
+    unsafe_allow_html=True
+)
+ />'
+    '</div>',
+    unsafe_allow_html=True
+)
+
 # ==============================
 # Sidebar: Info & Instructions
 # ==============================
