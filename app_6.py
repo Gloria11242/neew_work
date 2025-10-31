@@ -48,7 +48,7 @@ st.markdown(
 # Header image (fixed markdown; URL may need checking—see note below)
 st.markdown(
     '<div class="banner-img">'
-    '<img src="https://www.transaction.technology/uploads/images/_ecb2_images/gallery_feature_76/POS%20Retail.jpg" alt="Retail POS Banner">'
+    '<img src="https://tse3.mm.bing.net/th/id/OIP.Bliz0nZpoj_hbUq5oZmzsgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">'
     '</div>',
     unsafe_allow_html=True
 )
